@@ -1,3 +1,4 @@
+2016-11-04
 1：git diff 是比较工作环境和缓存区的不同,所以git add 后,git diff 就不会显示出不同了.
 2: git diff --cache是比较缓存区和上次提交是快照的不同
 3: git diff --staged 是显示出下次要提交的内容
@@ -19,4 +20,35 @@
 	1: 使用hash类型,可以直接操作用一key的不同列。
 	2: 加锁(redis的set的高级用发)
 
-	
+2016-11-07
+10: 我对协成的初步了解：可以让两个函数交叉执行,与线程不同的是，线程两个任务的交叉是内核控制的，而协成是用户控制的.
+11:实现异步的几种方式:
+	* Callback argument
+	* Return a placeholder (`.Future`, ``Promise``, ``Deferred``)
+	* Deliver to a queue
+	* Callback registry (e.g. POSIX signals)
+12: 忙轮询举例：
+	while True:
+	    for i in stream[]:
+	        if i has data:
+		    read until unavailable
+	从伪代码可以看出,忙轮询时,CPU总是在循环查看数据是否可读,很占CPU
+    无差别轮循
+	while True:
+	    select (stream[])
+	    for i in stream：
+		if i has data:
+		    read until unavailable 
+	从伪代码看出,在select(代理)能检测是否有数据可读,如果没有的话，会阻塞在此,如果有可读的数据流,就会进入循环,遍历所有的数据流.
+    有差别轮循
+	while True:
+	    active_stream=epoll(stream[])
+	    for i in active_stream:
+		if i has data:
+		    read until unavailable
+	epell原理和select是相同的，但是epoll这个代理比较厉害,除了能找到可读 的数据流外，还能找到那几个数据流是可读的,这样,就可以只遍历有效的数据流,避免无效的遍历。
+    就少量数据流而言,select和epoll的差别不大,但是当流数量增大时,select无效轮循的数量就增大了.	
+13: List
+	append 在列表末尾添加一个元素
+	extend 在A列表的末尾追加B的一系列元素 如：a = [1,2,3], b=[4,5,6], a.extend(b[0:1])
+14: 
