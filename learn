@@ -51,4 +51,10 @@
 13: List
 	append 在列表末尾添加一个元素
 	extend 在A列表的末尾追加B的一系列元素 如：a = [1,2,3], b=[4,5,6], a.extend(b[0:1])
-14: 
+
+2016-11-09
+14: docker的关键词：镜像，容器，数据卷，链接
+15：docker的关键词: cgroups 和 union文件系统
+16: 比较linux下rsync和scp的异同
+17: linux:screen 命令(detach暂时断开, attach重新连接), 
+	ctrl+a+d暂时退出
