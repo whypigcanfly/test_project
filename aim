@@ -7,3 +7,4 @@
 3: shell
 4: linux:sed, linux:awk
 5: openstack
+6: 正则表达式
