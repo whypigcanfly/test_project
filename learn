@@ -64,3 +64,7 @@
 19: telnet host port 用来登录远程服务器(也可以用来判断远程的某个占用某个端口的服务是否启动)
 20: netstat查看有关网络的信息 
     如： netstat -apn| grep python 查看有关python 的进程的端口以及端口的状态
+21: 在列表循环中删除列表的元素事难免会出现错误，可以用深拷贝来解决此问题
+	for i in list[:]:
+	    list.remove(i)
+22: curl
