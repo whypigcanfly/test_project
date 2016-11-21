@@ -1,14 +1,14 @@
-1:cat(tac)			XX
-2:tr
-3:script
-4:find
-5:xargs
-6:tr(translate)
-7:md5sum
-  sha1sum
-8:tempfile(只存在于某些linux系统中)
-9:split(csplit)
-10:expect
+1: cat(tac)			XX
+2: tr
+3: script
+4: find
+5: xargs
+6: tr(translate)
+7: md5sum
+   sha1sum
+8: tempfile(只存在于某些linux系统中)
+9: split(csplit)
+10: expect
 11: dd if=/dev/zero op=test.data bs=10M count=1
 12: mkdir 
 13: chmod
@@ -22,3 +22,11 @@
 21: losetup
 22: fdisk
 23: sync
+24: head
+25：tail
+26: pushd popd dirs
+27: wc
+28: tree
+29: grep
+30: cut
+31: sed

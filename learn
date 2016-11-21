@@ -68,3 +68,6 @@
 	for i in list[:]:
 	    list.remove(i)
 22: curl
+
+2016-11-18
+23: python 中类，基类，抽象基类，元类
